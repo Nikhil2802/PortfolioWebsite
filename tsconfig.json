@@ -16,6 +16,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Experience.jsx", "pages/_app.jsx", "pages/_appjtsx", "pages/_document.jsx", "pages/index.jsx", "components/Skills.1.jsx", "components/Skill.jsx", "components/Projects.jsx", "components/Projectsjtsx", "components/ProjectCard.jsx", "components/Hero.jsx", "components/Header.jsx", "components/ExperienceCard.jsx", "components/Circles.jsx", "components/About.jsx"],
   "exclude": ["node_modules"]
 }
