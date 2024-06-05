@@ -32,7 +32,7 @@ export const experiences = [
       startDate: 'Sept 2016',
       endDate: 'June 2020',
       summaryPoints: 'Graduated with honors, specializing in software development.',
-      detailedDescription: 'Detailed description of the Bachelor of Science in Computer Science at University of XYZ...',
+      detailedDescription: 'Detailed description of the Bachelor of Science in Computer Science at University of XYZ...asdawdq',
       logo: '/Fujitsu-Symbol.png',
     },
     {
