@@ -86,8 +86,9 @@ const ExperienceCard = ({ experience }) => {
       gap: "12px", 
       background: '#292929', 
       color: '#fff',
-      boxShadow: "0px 0px 15px 3px rgba(255,0,0,0.7)",
+      boxShadow: "0px 0px 15px 3px rgba(255,0,0,0.2)",
       borderRadius: "6px", 
+      border: "2px solid #fc8181",  
       // height: '200px',
       // width: '400px',
       

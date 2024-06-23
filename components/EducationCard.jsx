@@ -81,8 +81,9 @@ const EducationCard = ({ education }) => {
           gap: "12px",
           background: '#292929',
           color: '#fff',
-          boxShadow: "0px 0px 15px 3px rgba(0,255,0,0.7)",
+          boxShadow: "0px 0px 15px 3px rgba(0,255,0,0.2)",
           borderRadius: "6px",
+          border: "2px solid #86efac",  
         }}
         contentArrowStyle={{
           borderRight: '7px solid  #292929'

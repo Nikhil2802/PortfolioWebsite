@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-import Skills from '@/components/Skills.1';
+import  Skills from '@/components/Skills';
 import Projects from "@/components/Projects";
-import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
