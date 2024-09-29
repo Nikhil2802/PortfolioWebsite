@@ -24,7 +24,7 @@ export default function Home() {
       />
       
       <Head>
-        <title>Nikhil's Portfolio</title>
+        <title>Nikhil&apos;s Portfolio</title>
       </Head>
 
     <Header/>
