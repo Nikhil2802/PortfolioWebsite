@@ -3,6 +3,7 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import styled from 'styled-components';
 import Modal from './Modal';
 
+// Styled components
 const Top = styled.div`
   width: 100%;
   display: flex;
@@ -14,6 +15,7 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative; /* Ensure the button can be positioned absolutely */
 `;
 
 const Role = styled.div`
@@ -25,6 +27,7 @@ const Role = styled.div`
     font-size: 14px;
   }
 `;
+
 const Company = styled.div`
   font-size: 14px;
   font-weight: 500;
@@ -34,6 +37,7 @@ const Company = styled.div`
     font-size: 12px;
   }
 `;
+
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
@@ -54,12 +58,50 @@ const Description = styled.div`
   font-size: 15px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
+  margin-bottom: 50px; /* Increased margin to ensure space for button */
+
   @media only screen and (max-width: 768px) {
     font-size: 12px;
+    margin-bottom: 5px; /* Adjusted for mobile view */
   }
 `;
 
+// Button with styles
+const ViewMoreButton = styled.a`
+  position: absolute; /* Positioning the button absolutely within its container */
+  bottom: 10px; /* Spacing from the bottom */
+  left: 10px; /* Spacing from the left */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000; /* Black text color */
+  background: linear-gradient(to right, #6ee7b7, #a3e635); /* Gradient background */
+  border-radius: 9999px; /* Fully rounded button */
+  padding: 12px 24px; /* Increased padding for a larger button */
+  font-size: 0.875rem; /* Larger font size for the button */
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 0px 15px 3px rgba(0, 255, 0, 0.2); /* Shadow for the button */
+
+  &:hover {
+    background: linear-gradient(to right, #4ade80, #a3e635); /* Darker gradient on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0px 0px 20px 5px rgba(0, 255, 0, 0.4); /* Enhanced shadow on hover */
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px 5px rgba(0, 255, 0, 0.4); /* Shadow on focus */
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 8px 16px; /* Adjusted padding for mobile */
+    font-size: 0.75rem; /* Smaller font size for mobile */
+  }
+`;
 
 const EducationCard = ({ education }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -72,6 +114,8 @@ const EducationCard = ({ education }) => {
     setIsModalOpen(false);
   };
 
+  const isALevels = education.degree === 'A Levels';
+
   return (
     <>
       <VerticalTimelineElement
@@ -83,10 +127,11 @@ const EducationCard = ({ education }) => {
           color: '#fff',
           boxShadow: "0px 0px 15px 3px rgba(0,255,0,0.2)",
           borderRadius: "6px",
-          border: "2px solid #86efac",  
+          border: "2px solid #86efac",
+          paddingBottom: isALevels ? '10px' : '30px', // Reduce padding for A Levels card
         }}
         contentArrowStyle={{
-          borderRight: '7px solid  #292929'
+          borderRight: '7px solid  #292929',
         }}
         iconStyle={{ background: '#292929', color: '#fff' }}
         icon={<img src={education.logo} alt={education.institution} className="w-10 h-10 md:w-16 md:h-14 object-contain object-center" />}
@@ -100,12 +145,27 @@ const EducationCard = ({ education }) => {
         </Top>
 
         <Description>
-          {education.summaryPoints && <Span>{education.summaryPoints}</Span>}
+      
+          {education.summaryPoints && Array.isArray(education.summaryPoints) && (
+            <ul className="list-disc pl-5"> {/* Adds bullet points and left padding */}
+              {education.summaryPoints.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          )}
+
+          {education.summaryPoints && !Array.isArray(education.summaryPoints) && (
+            <Span>{education.summaryPoints}</Span>
+          )}
         </Description>
-          <a onClick={handleViewMore} target="_blank" rel="noopener noreferrer" className="items-center text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium text-sm px-5 py-2.5 text-center me-52 md:me-64 -mb-8 md:-mb-1  rounded-full">
-            <span>View More</span>
-          </a>
+
+        {education.detailedDescription && education.detailedDescription.length > 0 && (
+          <ViewMoreButton onClick={handleViewMore} target="_blank" rel="noopener noreferrer">
+            View More
+          </ViewMoreButton>
+        )}
       </VerticalTimelineElement>
+
       {isModalOpen && <Modal education={education} onClose={handleCloseModal} />}
     </>
   );

@@ -24,7 +24,7 @@ export default function Hero() {
                     <Cursor cursorColor="Red" />   
                 </h2>
 
-                <div> 
+                <div className='-space-x-3 md:space-x-0'> 
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>
@@ -36,7 +36,8 @@ export default function Hero() {
                     </Link>
                     <Link href="#projects">
                         <button className='heroButton'>Projects</button>
-                    </Link>            
+                    </Link>   
+                             
                 </div>
             </div>
         </div>

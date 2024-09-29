@@ -14,14 +14,16 @@ const Experience = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className='min-h-screen flex relative overflow-hidden flex-col text-left md:flex-row px-12 justify-center items-center mx-auto md:top-18'
+      className="min-h-screen flex flex-col items-center mx-auto relative"
     >
-      <h3 className='absolute top-28 md:top-16 uppercase tracking-[20px] text-gray-500 text-2xl'>
+      <h3 className="absolute top-28 md:top-16 uppercase tracking-[20px] text-gray-500 text-2xl z-20">
         Experience
       </h3>
-      <div id="Experience" className='mt-20 w-full'>
-        <div className="mb-4 border-gray-200 dark:border-gray-700">
-          <ul className="flex flex-wrap -mb-px text-sm font-medium text-center" role="tablist">
+      
+      {/* Tabs Container */}
+      <div className="w-full mt-40 md:mt-28 mb-8 z-20">
+        <div className="border-b border-gray-200 dark:border-gray-700">
+          <ul className="flex justify-center text-sm font-medium text-center" role="tablist">
             <li className="me-2" role="presentation">
               <button
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${activeTab === 'Experience' ? 'text-purple-600 border-purple-600' : 'text-gray-500 border-transparent hover:text-gray-600 hover:border-gray-300'}`}
@@ -44,26 +46,28 @@ const Experience = () => {
             </li>
           </ul>
         </div>
-        <div id="tab-content" className="relative " style={{ height: '650px' }}>
-          {activeTab === 'Experience' && (
-            <div className="p-4 rounded-lg h-full overflow-y-auto">
-              <VerticalTimeline>
-                {experiences.map((experience, index) => (
-                  <ExperienceCard key={index} experience={experience} />
-                ))}
-              </VerticalTimeline>
-            </div>
-          )}
-          {activeTab === 'Education' && (
-            <div className="p-4 rounded-lg h-full overflow-y-auto">
-              <VerticalTimeline>
-                {education.map((education, index) => (
-                  <EducationCard key={index} education={education} />
-                ))}
-              </VerticalTimeline>
-            </div>
-          )}
-        </div>
+      </div>
+      
+      {/* Timeline Content */}
+      <div id="tab-content" className="w-full flex-grow">
+        {activeTab === 'Experience' && (
+          <div className="p-4 rounded-lg">
+            <VerticalTimeline lineColor="gray">
+              {experiences.map((experience, index) => (
+                <ExperienceCard key={index} experience={experience} />
+              ))}
+            </VerticalTimeline>
+          </div>
+        )}
+        {activeTab === 'Education' && (
+          <div className="p-4 rounded-lg">
+            <VerticalTimeline lineColor="white">
+              {education.map((education, index) => (
+                <EducationCard key={index} education={education} />
+              ))}
+            </VerticalTimeline>
+          </div>
+        )}
       </div>
     </motion.div>
   );

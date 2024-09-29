@@ -10,6 +10,7 @@ module.exports = {
         'red': '0px 0px 15px 3px rgba(255,0,0,0.7)',
         'blue': '0px 0px 15px 3px rgba(0,0,255,0.7)',
         'green': '0px 0px 15px 3px rgba(0,255,0,0.7)',
+        'white': '0px 0px 15px 3px rgba(175,175,175,0.2)',
         'dark-red': '0px 0px 15px 3px rgba(255,0,0,0.2)',
         'dark-blue': '0px 0px 15px 3px rgba(0,0,255,0.2)',
         'dark-green': '0px 0px 15px 3px rgba(0,255,0,0.2)',
@@ -18,6 +19,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 

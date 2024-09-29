@@ -1,7 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import styled, { keyframes } from 'styled-components';
 
+// Keyframes for the fade-in and fade-out animations
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
+
+// Styled components
 const ModalBackground = styled.div`
   position: fixed;
   top: 0;
@@ -13,48 +33,139 @@ const ModalBackground = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 100;
+  animation: ${({ isVisible }) => (isVisible ? fadeIn : fadeOut)} 0.3s ease-in;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 `;
 
-
 const ModalContainer = styled.div`
-  background: #292929;
-  color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0px 0px 15px 3px rgba(0, 255, 0, 0.7);
   position: relative;
+  background-color: #292929;
+  color: #fff;
+  border: 2px solid #86efac;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 97.3%;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0px 0px 15px 3px rgba(0, 255, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 12px;
-`;
+  animation: ${({ isVisible }) => (isVisible ? fadeIn : fadeOut)} 0.3s ease-in;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 
-const CloseButton = styled.button`
-  background-color: #ff5f5f;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: -195px;
-  &:hover {
-    background-color: #e55555;
+  @media (min-width: 576px) {
+    max-width: 85%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 75%;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 40%;
   }
 `;
 
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #86efac;
+  padding-bottom: 8px;
+`;
+
+const Title = styled.h3`
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+`;
+
+const CloseButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background: linear-gradient(to right, #ff7e7e, #ff3b3b);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 0px 15px 3px rgba(255, 0, 0, 0.2);
+
+  &:hover {
+    background: linear-gradient(to right, #ff4c4c, #ff1a1a);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.4);
+  }
+`;
+
+const ModalBody = styled.div`
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  p, ul {
+    margin: 0;
+    color: #fff;
+  }
+  ul {
+    padding-left: 1.5rem;
+  }
+`;
+
+// Modal component
 const Modal = ({ education, onClose }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        initiateClose();
+      }
+    };
+    document.addEventListener('keydown', handleEsc);
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
+
+  const initiateClose = () => {
+    setIsVisible(false);
+    setTimeout(() => {
+      onClose();
+    }, 300); // Match the animation duration
+  };
+
   return ReactDOM.createPortal(
-    <ModalBackground>
-      <ModalContainer>
-        <CloseButton onClick={onClose} target="_blank" rel="noopener noreferrer" className="items-center text-white bg-gradient-to-r from-red-400 via-red-600 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium text-sm px-5 py-2.5 text-center me-52  -mb-8 md:-mb-1 rounded-full">Close</CloseButton>
-        {/* <CloseButton onClick={onClose} target="_blank" rel="noopener noreferrer" className="items-center text-white bg-gradient-to-r from-pink-400 via-pink-600 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium text-sm px-5 py-2.5 text-center me-52 md:me-64 -mb-8 md:-mb-1  rounded-full">Close</CloseButton> */}
-        <h2>{education.degree}</h2>
-        <h3>{education.institution}</h3>
-        <p>{`${education.startDate} - ${education.endDate}`}</p>
-        <p>{education.detailedDescription}</p>
+    <ModalBackground isVisible={isVisible} onClick={initiateClose}>
+      <ModalContainer isVisible={isVisible} onClick={(e) => e.stopPropagation()}>
+        <Header>
+          <Title>{education.degree}</Title>
+          <CloseButton onClick={initiateClose}>Close</CloseButton>
+        </Header>
+        <ModalBody>
+          <h3>{education.institution}</h3>
+          <p>{`${education.startDate} - ${education.endDate}`}</p>
+          {Array.isArray(education.detailedDescription) ? (
+            <ul>
+              {education.detailedDescription.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{education.detailedDescription}</p>
+          )}
+        </ModalBody>
       </ModalContainer>
     </ModalBackground>,
     document.body

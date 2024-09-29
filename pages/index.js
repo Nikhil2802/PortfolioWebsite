@@ -6,13 +6,14 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import  Skills from '@/components/Skills';
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 import AnimatedCursor from "react-animated-cursor";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div className="bg-[hsl(0,0%,14%)] text-white h-screen snap-y snap-mandatory
-    overflow-scroll z-0">
+    overflow-scroll z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-400">
       <AnimatedCursor
       innerSize={8}
       outerSize={8}
@@ -49,7 +50,10 @@ export default function Home() {
       <Projects/>
     </section>
 
-    {/*Contact Me*/}
+    <section id="contact" className="snap-start">
+      <Contact/>
+    </section>
+
     </div>
   );
 } 
