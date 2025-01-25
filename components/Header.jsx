@@ -44,7 +44,7 @@ export default function Header() {
         }}
         className='flex flex-row items-center text-gray-300 cursor-pointer'>
         <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent' />
-        <p className='uppercase hidden md:inline-flex text-gray-400 text-sm'> Contact me </p>
+        <p className='uppercase hidden md:inline-flex text-gray-400 text-sm'> Contact </p>
       </motion.div>
         
         
