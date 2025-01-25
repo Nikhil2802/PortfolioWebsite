@@ -8,6 +8,16 @@
         text-xs tracking-widest text-gray-500 transition-all 
         hover:border-red-500 hover:text-red-500
     }
+      
 }
 
 
+
+html {
+    font-size: 75%;
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+
+  
+  
