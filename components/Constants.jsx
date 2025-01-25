@@ -26,19 +26,6 @@ export const experiences = [
   
   export const education = [
     {
-      degree: 'A Levels',
-      institution: 'Bolton Sixth Form',
-      startDate: 'Sept 2018',
-      endDate: 'July 2020',
-      summaryPoints: [
-        'Computer Science',
-        'Mathematics',
-        'IT'
-      ],
-      detailedDescription: '', 
-      logo: '/BSF.png',
-    },
-    {
       degree: 'Bachelor of Science in Computer Science (Hons)',
       institution: 'Liverpool John Moores University',
       startDate: 'Sept 2020',
@@ -62,4 +49,18 @@ export const experiences = [
       ],
       logo: '/LJMU1.PNG',
     },
+    {
+      degree: 'A Levels',
+      institution: 'Bolton Sixth Form',
+      startDate: 'Sept 2018',
+      endDate: 'July 2020',
+      summaryPoints: [
+        'Computer Science',
+        'Mathematics',
+        'IT'
+      ],
+      detailedDescription: '', 
+      logo: '/BSF.png',
+    },
+
   ];
