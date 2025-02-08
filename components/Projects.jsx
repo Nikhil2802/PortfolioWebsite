@@ -59,7 +59,7 @@ const Projects = () => {
         </div>
         
         {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-3 md:gap-12 md:p-3">
+        <div className="hidden md:grid md:grid-cols-3 md:gap-40 md:p-1 md:mr-14">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
