@@ -8,7 +8,7 @@ const Projects = () => {
       imgUrl: "FR-3.webp",
       tags: ["Python", "Tensorflow", "Keras"],
       title: "Facial Recognition System",
-      description: "A facial recognition system using deep learning and techniques to identify and verify individuals.",
+      description: "A facial recognition system using deep learning and machine learning techniques to identify and verify individuals.",
       githubUrl: "https://github.com/Nikhil2802/FacialRecognitionProject",
       demoUrl: "/FRdemo.mp4"
     },
