@@ -29,10 +29,10 @@ export default function AnimatedCircles() {
       transition={{ duration: 2 }}
       className='relative flex justify-center items-center'>
       
-      <div className="absolute border border-[#333333] rounded-full h-[50px] w-[50px] mt-52 animate-ping opacity-20 sm:h-[100px] sm:w-[100px]" />
-      <div className='rounded-full border border-[#333333] h-[150px] w-[150px] absolute mt-52 opacity-20 sm:h-[300px] sm:w-[300px]' />
-      <div className='rounded-full border border-red-500 opacity-20 h-[380px] w-[380px] absolute mt-52 animate-pulse sm:h-[450px] sm:w-[450px]'/>
-      <div className='rounded-full border border-[#333333] h-[300px] w-[300px] absolute mt-52 opacity-20 sm:h-[600px] sm:w-[600px]'/>
+      <div className="absolute border border-[#333333] rounded-full h-[50px] w-[50px] mt-10 animate-ping opacity-20 sm:h-[100px] sm:w-[100px]" />
+      <div className='rounded-full border border-[#333333] h-[150px] w-[150px] absolute mt-10 opacity-20 sm:h-[300px] sm:w-[300px]' />
+      <div className='rounded-full border border-red-500 opacity-20 h-[380px] w-[380px] absolute mt-10 animate-pulse sm:h-[450px] sm:w-[450px]'/>
+      <div className='rounded-full border border-[#333333] h-[300px] w-[300px] absolute mt-20 opacity-20 sm:h-[600px] sm:w-[600px]'/>
     </motion.div>
   );
 }
