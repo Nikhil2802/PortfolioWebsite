@@ -96,9 +96,9 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{ 
         borderRight: '7px solid  #292929' 
     }}
-    //   date={`${experience.startDate} - ${experience.endDate}`}
+      date={`${experience.startDate} - ${experience.endDate}`}
       iconStyle={{ background: '#292929', color: '#fff' }}
-      icon={<img src={experience.logo} alt={experience.company} className="w-10 h-10 md:w-16 md:h-14 object-contain object-center" />}
+      icon={<img src={experience.logo} alt={experience.company} className="w-10 h-10 md:w-20 md:h-20 object-contain object-center" />}
     >
 
       <Top>
@@ -106,7 +106,7 @@ const ExperienceCard = ({ experience }) => {
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
-          <Date>{`${experience.startDate} - ${experience.endDate}`}</Date>
+          {/* <Date>{`${experience.startDate} - ${experience.endDate}`}</Date> */}
         </Body>
       </Top>
 

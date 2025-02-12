@@ -133,14 +133,15 @@ const EducationCard = ({ education }) => {
         contentArrowStyle={{
           borderRight: '7px solid  #292929',
         }}
+        date = {`${education.startDate} - ${education.endDate}`}
         iconStyle={{ background: '#292929', color: '#fff' }}
-        icon={<img src={education.logo} alt={education.institution} className="w-10 h-10 md:w-16 md:h-14 object-contain object-center" />}
+        icon={<img src={education.logo} alt={education.institution} className="w-10 h-10 md:w-20 md:h-20 object-contain object-center" />}
       >
         <Top>
           <Body>
             <Role>{education.degree}</Role>
             <Company>{education.institution}</Company>
-            <Date>{`${education.startDate} - ${education.endDate}`}</Date>
+            {/* <Date>{`${education.startDate} - ${education.endDate}`}</Date> */}
           </Body>
         </Top>
 
