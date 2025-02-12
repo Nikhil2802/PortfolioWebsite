@@ -15,7 +15,7 @@ export default function Hero() {
     });
 
     return (
-        <div className='h-screen flex flex-col -space-y-12 items-center justify-center text-center overflow-hidden'>
+        <div className='h-screen flex flex-col -space-y-12 pb-32 items-center justify-center text-center overflow-hidden'>
             <Circles />
             <div className='z-20'>
                 <h1 className='text-sm uppercase text-gray-500 tracking-[15px] '> Nikhil Patel</h1>
