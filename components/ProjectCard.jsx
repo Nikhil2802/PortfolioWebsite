@@ -84,7 +84,7 @@ const ProjectCard = ({ imgUrl, tags, title, description, githubUrl, demoUrl }) =
   return (
     <>
       <article className="flex flex-col rounded-lg items-center justify-evenly flex-shrink-0 bg-[#292929] p-6 overflow-hidden snap-center 
-      md:w-[300px] md:h-[450px] w-[290px] h-[450px] border border-red-300 shadow-dark-red">
+      md:w-[250px] md:h-[400px] w-[290px] h-[450px] border border-red-300 shadow-dark-red">
         <img
           className="w-32 h-32 xl:w-[150px] xl:h-[150px] object-contain object-center"
           src={imgUrl}
