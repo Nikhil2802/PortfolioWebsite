@@ -22,7 +22,7 @@ export default function About() {
         viewport={{ once: true }}
         src='/PHOTO-2022-09-11-19-39-04.jpg'
         alt='Profile'
-        className='-mb-16 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[400px] xl:h-[400px] shadow-lg border border-gray-600'
+        className='-mb-16 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[350px] xl:h-[350px] shadow-lg border border-gray-600'
       />
 
       {/* Text Section */}
