@@ -18,6 +18,6 @@ export const skills = {
       { name: 'TensorFlow', image: '/TF.svg' },
       { name: 'Keras', image: '/keras.webp' },
       { name: 'Scikit-learn', image: '/sk.svg' },
-      { name: 'OpenCV', image: '/openCV.svg' }
+      { name: 'OpenCV', image: '/opencv.png' }
     ]
   };
