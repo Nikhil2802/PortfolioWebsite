@@ -135,7 +135,7 @@ const EducationCard = ({ education }) => {
         }}
         date = {`${education.startDate} - ${education.endDate}`}
         iconStyle={{ background: '#292929', color: '#fff' }}
-        icon={<img src={education.logo} alt={education.institution} className="w-10 h-10 md:w-20 md:h-20 object-contain object-center" />}
+        icon={<img src={education.logo} alt={education.institution} className="w-14 h-14 md:w-20 md:h-20 object-contain object-center" />}
       >
         <Top>
           <Body>

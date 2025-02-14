@@ -98,7 +98,7 @@ const ExperienceCard = ({ experience }) => {
     }}
       date={`${experience.startDate} - ${experience.endDate}`}
       iconStyle={{ background: '#292929', color: '#fff' }}
-      icon={<img src={experience.logo} alt={experience.company} className="w-10 h-10 md:w-20 md:h-20 object-contain object-center" />}
+      icon={<img src={experience.logo} alt={experience.company} className="w-14 h-12 md:w-20 md:h-20 object-contain object-center" />}
     >
 
       <Top>
