@@ -8,13 +8,13 @@ export const skills = {
     ],
     backEnd: [
       { name: 'Java', image: 'https://cdn-icons-png.flaticon.com/128/226/226777.png' },
-      { name: 'Python', image: '/PY.webp' },
+      { name: 'Python', image: '/python.svg' },
       { name: 'MySQL', image: '/sql.webp' },
       { name: 'PHP', image: '/php.webp' },
       { name: 'Tkinter', image: '/tk.png' }
     ],
     ML: [
-      { name: 'Python', image: '/PY.webp' },
+      { name: 'Python', image: '/python.svg' },
       { name: 'TensorFlow', image: '/TF.svg' },
       { name: 'Keras', image: '/keras.webp' },
       { name: 'Scikit-learn', image: '/sk.svg' },
