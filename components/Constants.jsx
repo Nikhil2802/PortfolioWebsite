@@ -47,7 +47,7 @@ export const experiences = [
         'Object Oriented Systems Development - 73%',
         'Algorithm Design - 73%' 
       ],
-      logo: '/LJMU1.PNG',
+      logo: '/LJMU1.svg',
     },
     {
       degree: 'A Levels',
