@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState(0); // Track active project
+
   const projects = [
     {
       imgUrl: "FR-3.webp",
@@ -30,6 +32,14 @@ const Projects = () => {
     }
   ];
 
+  // Handle scroll to update active index
+  const handleScroll = (event) => {
+    const scrollLeft = event.target.scrollLeft;
+    const totalWidth = event.target.scrollWidth;
+    const itemWidth = totalWidth / projects.length;
+    setActiveIndex(Math.round(scrollLeft / itemWidth));
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -40,10 +50,11 @@ const Projects = () => {
       <h3 className='absolute top-28 md:top-5 uppercase tracking-[20px] text-gray-500 text-2xl'>
         Projects
       </h3>
-      
-      <div className='w-full max-w-7xl mx-auto md:p-10 '>
-        {/* Mobile carousel */}
-        <div className="w-full flex overflow-x-scroll snap-x snap-mandatory space-x-0 md:hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-400">
+
+      <div className='w-full max-w-7xl mx-auto md:p-10'>
+        {/* Mobile carousel with scroll tracking */}
+        <div className="w-full flex overflow-x-scroll snap-x snap-mandatory space-x-0 md:hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-400"
+          onScroll={handleScroll}>
           {projects.map((project, index) => (
             <div key={index} className="w-screen px-4">
               <ProjectCard
@@ -57,7 +68,17 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        
+
+        {/* Carousel indicators (dots) */}
+        <div className="flex justify-center mt-4 md:hidden">
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              className={`h-2 w-2 mx-1 rounded-full ${activeIndex === index ? 'bg-red-500 scale-110' : 'bg-gray-500'}`}
+            />
+          ))}
+        </div>
+
         {/* Desktop grid */}
         <div className="hidden md:grid md:grid-cols-3 md:gap-40 md:p-1 md:mr-14">
           {projects.map((project, index) => (
@@ -74,7 +95,7 @@ const Projects = () => {
         </div>
       </div>
     </motion.div>
-  )   
-}
+  );
+};
 
 export default Projects;
