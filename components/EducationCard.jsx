@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import styled from 'styled-components';
 import Modal from './Modal';
@@ -66,7 +66,6 @@ const Description = styled.div`
   }
 `;
 
-// Button with styles
 const ViewMoreButton = styled.a`
   position: absolute; /* Positioning the button absolutely within its container */
   bottom: 10px; /* Spacing from the bottom */
@@ -75,7 +74,7 @@ const ViewMoreButton = styled.a`
   align-items: center;
   justify-content: center;
   color: #000; /* Black text color */
-  background: linear-gradient(to right, #6ee7b7, #a3e635); /* Gradient background */
+  background: linear-gradient(to right, #6ee7b7, #a3e635);
   border-radius: 9999px; /* Fully rounded button */
   padding: 12px 24px; /* Increased padding for a larger button */
   font-size: 0.875rem; /* Larger font size for the button */
@@ -105,6 +104,7 @@ const ViewMoreButton = styled.a`
 
 const EducationCard = ({ education }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // State to track mobile view
 
   const handleViewMore = () => {
     setIsModalOpen(true);
@@ -113,6 +113,20 @@ const EducationCard = ({ education }) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+  // Set up an effect to detect screen size change
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768); // Set mobile state based on window width
+    };
+
+    checkScreenSize(); // Run on component mount
+    window.addEventListener('resize', checkScreenSize); // Listen for screen size changes
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize); // Clean up event listener
+    };
+  }, []);
 
   const isALevels = education.degree === 'A Levels';
 
@@ -133,7 +147,7 @@ const EducationCard = ({ education }) => {
         contentArrowStyle={{
           borderRight: '7px solid  #292929',
         }}
-        date = {`${education.startDate} - ${education.endDate}`}
+        date = {!isMobile ? `${education.startDate} - ${education.endDate}` : null} // Show date inline on desktop only
         iconStyle={{ background: '#292929', color: '#fff' }}
         icon={<img src={education.logo} alt={education.institution} className="w-14 h-14 md:w-20 md:h-20 object-contain object-center" />}
       >
@@ -141,12 +155,12 @@ const EducationCard = ({ education }) => {
           <Body>
             <Role>{education.degree}</Role>
             <Company>{education.institution}</Company>
-            {/* <Date>{`${education.startDate} - ${education.endDate}`}</Date> */}
+            {/* Only show the Date on mobile view */}
+            {isMobile && <Date>{`${education.startDate} - ${education.endDate}`}</Date>}
           </Body>
         </Top>
 
         <Description>
-      
           {education.summaryPoints && Array.isArray(education.summaryPoints) && (
             <ul className="list-disc pl-5"> {/* Adds bullet points and left padding */}
               {education.summaryPoints.map((point, index) => (
@@ -167,7 +181,8 @@ const EducationCard = ({ education }) => {
         )}
       </VerticalTimelineElement>
 
-      {isModalOpen && <Modal education={education} onClose={handleCloseModal} />}
+      {isModalOpen && <Modal data={education} type="education" onClose={handleCloseModal} />}
+
     </>
   );
 };

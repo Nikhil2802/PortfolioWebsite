@@ -28,13 +28,13 @@ const SendButton = styled.button`
     switch (status) {
       case 'sending':
         return css`
-          background: linear-gradient(to right, #ffbf00, #ffae00); /* Orange when sending */
+          background: linear-gradient(to right, #ffbf00, #ffae00); 
           box-shadow: 0px 0px 15px 3px rgba(255, 191, 0, 0.4);
           cursor: not-allowed;
         `;
       case 'success':
         return css`
-          background: linear-gradient(to right, #4ade80, #22c55e); /* Green on success */
+          background: linear-gradient(to right, #4ade80, #22c55e); 
           box-shadow: 0px 0px 20px 5px rgba(34, 197, 94, 0.4);
           &:hover {
             transform: scale(1.05);
@@ -44,7 +44,7 @@ const SendButton = styled.button`
         return css`
           background: linear-gradient(to right, #ff4c4c, #ff1a1a);
           box-shadow: 0px 0px 20px 5px rgba(255, 0, 0, 0.4);
-          animation: ${shake} 0.3s ease-in-out; /* Shake effect */
+          animation: ${shake} 0.3s ease-in-out; 
         `;
       default:
         return css`

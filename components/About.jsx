@@ -26,12 +26,12 @@ export default function About() {
       />
 
       {/* Text Section */}
-      <div className='space-y-6 md:space-y-8 px-0 md:px-10 bg-gray-800 bg-opacity-20 p-4 md:p-6 rounded-lg shadow-lg md:shadow-xl md:mb-4'>
+      <div className='space-y-6 md:space-y-8 px-0 md:px-10 bg-gray-800 bg-opacity-20 p-4 md:p-6 rounded-lg shadow-lg md:shadow-xl mb-12 md:mb-4'>
         <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
-          I am a <span className='text-yellow-400 font-semibold'>Computer Science graduate</span> with a strong passion for technology and solving complex problems. My experience with <span className='text-purple-400'>AI</span> and <span className='text-purple-400'>Machine Learning</span>, particularly through my final year project on <span className='text-blue-400'>Facial Recognition</span>, has equipped me to tackle cutting-edge challenges in software development.
+          I am a passionate Computer Science graduate with a focus on technology-driven problem-solving. With a solid background in Artificial Intelligence and Machine Learning, I’ve had the opportunity to apply these skills to a wide range of projects, including my final year research on Facial Recognition technology. These experiences have sharpened my ability to develop innovative software solutions that tackle complex challenges.
         </p>
-        <p className='text-sm md:text-base leading-relaxed text-gray-300'>
-          I thrive in environments that demand both analytical thinking and creativity, pushing the boundaries of what technology can achieve. Beyond tech, I’m dedicated to maintaining a balanced lifestyle through sports, constantly challenging myself to reach new heights.
+        <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
+          I am deeply driven by both analytical problem-solving and creative thinking, thriving in environments that require constant learning and pushing technological boundaries. When I'm not coding, I enjoy staying active through sports, which helps me stay balanced and continue to push myself toward new personal achievements.
         </p>
       </div>
     </motion.div>
