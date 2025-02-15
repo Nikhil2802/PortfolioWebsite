@@ -69,7 +69,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Carousel indicators (dots) */}
+        {/* Carousel indicators */}
         <div className="flex justify-center mt-4 md:hidden">
           {projects.map((_, index) => (
             <div

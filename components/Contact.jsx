@@ -53,7 +53,7 @@ export default function Contact() {
       </h3>
 
       {/* Contact Form Container */}
-      <div className="flex flex-col space-y-6 w-full max-w-lg mt-16 md:mt-0 bg-[#292929] p-8 rounded-lg shadow-lg border border-red-300">
+      <div className="flex flex-col space-y-6 w-full max-w-xl mt-16 md:mt-0 bg-[#292929] p-8 rounded-lg shadow-lg border border-red-300">
         {/* Name Input */}
         <div className="relative">
           <label className="absolute left-4 top-[-8px] text-sm text-gray-400 bg-[#292929] px-1">

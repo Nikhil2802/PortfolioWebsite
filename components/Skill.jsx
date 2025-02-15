@@ -14,7 +14,7 @@ const Skill = ({ skill, directionLeft }) => {
         viewport={{ once: true }}
         src={skill.image}
         alt={skill.name}
-        className="rounded-3xl object-cover w-full h-full p-1 filter group-hover:brightness-75 transition duration-300 ease-in-out border border-red-300 shadow-dark-red"
+        className="rounded-3xl object-cover w-full h-full p-1 filter group-hover:brightness-75 transition duration-300 ease-in-out border border-red-400 shadow-dark-pink"
         style={{ cursor: 'none' }}
       />
       

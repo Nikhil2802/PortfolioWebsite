@@ -15,7 +15,7 @@ const Skills = () => {
 
       {/* Grid Layout for all Skill Boxes */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full px-2 sm:px-10">
-        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-blue-300 shadow-dark-blue">
+        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-red-300 shadow-dark-red">
           <h4 className="text-lg sm:text-xl font-semibold mb-4 text-white">Front-End</h4>
           <div className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-3 sm:gap-5">
             {skills.frontEnd.map((skill, index) => (
@@ -24,7 +24,7 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-blue-300 shadow-dark-blue">
+        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-red-300 shadow-dark-red">
           <h4 className="text-lg sm:text-xl font-semibold mb-4 text-white">Back-End</h4>
           <div className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-3 sm:gap-5">
             {skills.backEnd.map((skill, index) => (
@@ -34,7 +34,7 @@ const Skills = () => {
         </div>
         
 
-        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-blue-300 shadow-dark-blue lg:col-span-2 lg:mx-auto lg:w-1/2">
+        <div className="bg-[#292929] p-2 sm:p-6 rounded-lg border border-red-300 shadow-dark-red lg:col-span-2 lg:mx-auto lg:w-1/2">
           <h4 className="text-lg sm:text-xl font-semibold mb-4 text-white">Machine Learning</h4>
           <div className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-3 sm:gap-5">
             {skills.ML.map((skill, index) => (
