@@ -31,7 +31,7 @@ export default function About() {
           I am a passionate Computer Science graduate with a focus on technology-driven problem-solving. With a solid background in Artificial Intelligence and Machine Learning, I&apos;ve had the opportunity to apply these skills to a wide range of projects, including my final year research on Facial Recognition technology. These experiences have sharpened my ability to develop innovative software solutions that tackle complex challenges.
         </p>
         <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
-          I am deeply driven by both analytical problem-solving and creative thinking, thriving in environments that require constant learning and pushing technological boundaries. When I'm not coding, I enjoy staying active through sports, which helps me stay balanced and continue to push myself toward new personal achievements.
+          I am deeply driven by both analytical problem-solving and creative thinking, thriving in environments that require constant learning and pushing technological boundaries. When I&apos;m not coding, I enjoy staying active through sports, which helps me stay balanced and continue to push myself toward new personal achievements.
         </p>
       </div>
     </motion.div>
