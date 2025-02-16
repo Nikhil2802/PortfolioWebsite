@@ -13,12 +13,11 @@ export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    // Check screen width and update state
     const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768); // Only enable cursor on screens wider than 768px
+      setIsDesktop(window.innerWidth > 768); 
     };
 
-    handleResize(); // Run on mount
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
@@ -26,7 +25,6 @@ export default function Home() {
 
   return (
     <div className="bg-[hsl(0,0%,14%)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-400">
-      {/* Only show AnimatedCursor if it's a desktop */}
       {isDesktop && (
         <AnimatedCursor
           innerSize={8}
