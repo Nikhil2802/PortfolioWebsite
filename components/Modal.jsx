@@ -47,9 +47,9 @@ const ModalContainer = styled.div`
   animation: ${({ isVisible }) => (isVisible ? fadeIn : fadeOut)} 0.3s ease-in;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   
-  @media (max-width: 768px) {
-    transform: translateY(-10%); 
-  }
+  // @media (max-width: 768px) {
+  //   transform: translateY(-10%); 
+  // }
 
   @media (min-width: 576px) { max-width: 85%; }
   @media (min-width: 768px) { max-width: 75%; }

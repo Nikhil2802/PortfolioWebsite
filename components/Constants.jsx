@@ -9,7 +9,7 @@ export const experiences = [
       ],
       detailedDescription:  [
         'Infrastructure Deployment & Management Build - configure, and manage virtualised data centres using VMware ESXi, vCenter, NSX, and Horizon (VDI).',
-        'Microsoft Systems Administration Deploy and maintain Windows Server - Active Directory, Group Policy, DNS, PKI, Exchange, SQL, SharePoint, and WSUS.',
+        'Microsoft Systems Administration Deploy and maintain - Active Directory, Group Policy, DNS, PKI, Exchange, SQL, SharePoint, and WSUS.',
         'Network Engineering - Configure, support, and troubleshoot Cisco switches, routers, and firepowers ',
         'Automation & Scripting - Use PowerShell for automation of system administration tasks and configuration management.',
         'Security & Compliance - Implement MOD security policies, manage firmware updates across servers, switches, and UPS, and ensure compliance with government security standards.',
