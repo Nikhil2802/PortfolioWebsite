@@ -20,7 +20,7 @@ export default function About() {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src='/PHOTO-2022-09-11-19-39-04.jpg'
+        src='/me.png'
         alt='Profile'
         className='-mb-16 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[350px] xl:h-[350px] shadow-lg border border-gray-600'
       />
@@ -28,10 +28,17 @@ export default function About() {
       {/* Text Section */}
       <div className='space-y-6 md:space-y-8 px-0 md:px-10 bg-gray-800 bg-opacity-20 p-4 md:p-6 rounded-lg shadow-lg md:shadow-xl mb-12 md:mb-4'>
         <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
-          I am a passionate Computer Science graduate with a focus on technology-driven problem-solving. With a solid background in Artificial Intelligence and Machine Learning, I&apos;ve had the opportunity to apply these skills to a wide range of projects, including my final year research on Facial Recognition technology. These experiences have sharpened my ability to develop innovative software solutions that tackle complex challenges.
+          Computer Science graduate with First Class Honours and professional experience delivering secure enterprise IT infrastructure solutions within the UK Defence sector.
+
         </p>
         <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
-          I am deeply driven by both analytical problem-solving and creative thinking, thriving in environments that require constant learning and pushing technological boundaries. When I&apos;m not coding, I enjoy staying active through sports, which helps me stay balanced and continue to push myself toward new personal achievements.
+          Currently working as a Systems Engineer at Fujitsu, supporting large-scale virtualised and secure environments across technologies including VMware vSphere, Horizon, NSX, Windows Server, Active Directory, Exchange, SharePoint, Cisco networking and PowerShell automation.
+        </p>
+        <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
+          Alongside my infrastructure experience, I have a strong passion for software engineering and full-stack development. I have designed and built web applications using React, Next.js, Node.js, PostgreSQL, Docker and AWS, focusing on scalable architecture, user authentication, cloud deployment and modern user experiences.
+        </p>
+        <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
+          I enjoy solving complex technical problems, learning new technologies and building solutions that improve efficiency through automation and software development. I am particularly interested in software engineering, cloud technologies, DevOps practices and enterprise-scale systems.
         </p>
       </div>
     </motion.div>
