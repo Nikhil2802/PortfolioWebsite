@@ -16,7 +16,7 @@ const Projects = () => {
     },
     {
       imgUrl: "Bottle1.png",
-      tags: ["Next.js", "Node.js", "FastAPI", "PostgreSQL", "Docker", "AWS"],
+      tags: ["Next.js", "Node.js", "PostgreSQL", "Docker", "AWS"],
       title: "ScentScape",
       description: "Designed and developed a full-stack fragrance discovery platform featuring a catalogue of 23,000+ fragrances, advanced search and filtering, user reviews and ratings, role-based account functionality, and machine learning-powered scent recommendations.",
       githubUrl: "https://github.com/Nikhil2802/ScentScape",
