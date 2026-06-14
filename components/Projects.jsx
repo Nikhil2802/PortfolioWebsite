@@ -15,12 +15,12 @@ const Projects = () => {
       demoUrl: "/FRdemo.mp4"
     },
     {
-      imgUrl: "ProjectPlaceholder.png",
-      tags: ["???", "???", "???"],
-      title: "Project 2",
-      description: "Project 2 Description",
-      githubUrl: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-      demoUrl: "/Rick Roll.mp4"
+      imgUrl: "Bottle1.png",
+      tags: ["Next.js", "Node.js", "FastAPI", "PostgreSQL", "Docker", "AWS"],
+      title: "ScentScape",
+      description: "Designed and developed a full-stack fragrance discovery platform featuring a catalogue of 23,000+ fragrances, advanced search and filtering, user reviews and ratings, role-based account functionality, and machine learning-powered scent recommendations.",
+      githubUrl: "https://github.com/Nikhil2802/ScentScape",
+      demoUrl: "/ScentScape.mp4"
     },
     {
       imgUrl: "ProjectPlaceholder.png",

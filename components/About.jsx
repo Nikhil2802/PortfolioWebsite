@@ -7,10 +7,10 @@ export default function About() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-6 md:px-10 justify-evenly mx-auto items-center'
+      className='flex flex-col relative min-h-screen text-center md:text-left md:flex-row max-w-7xl px-6 md:px-10 pt-32 pb-16 md:pt-24 md:pb-12 justify-center gap-8 md:gap-12 lg:gap-16 mx-auto items-center'
     >
       {/* Section Title */}
-      <h3 className='absolute top-24 uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl'>
+      <h3 className='absolute top-16 md:top-20 uppercase tracking-[15px] md:tracking-[20px] text-gray-500 text-xl md:text-2xl'>
         About
       </h3>
 
@@ -22,11 +22,11 @@ export default function About() {
         viewport={{ once: true }}
         src='/me.png'
         alt='Profile'
-        className='-mb-16 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[350px] xl:h-[350px] shadow-lg border border-gray-600'
+        className='flex-shrink-0 w-44 h-44 sm:w-52 sm:h-52 rounded-full object-cover object-center md:rounded-lg md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-[360px] xl:h-[360px] shadow-lg border border-gray-600'
       />
 
       {/* Text Section */}
-      <div className='space-y-6 md:space-y-8 px-0 md:px-10 bg-gray-800 bg-opacity-20 p-4 md:p-6 rounded-lg shadow-lg md:shadow-xl mb-12 md:mb-4'>
+      <div className='w-full max-w-3xl space-y-4 md:space-y-6 bg-gray-800 bg-opacity-20 p-4 md:p-6 rounded-lg shadow-lg md:shadow-xl'>
         <p className='text-sm md:text-lg leading-relaxed md:leading-relaxed text-gray-300'>
           Computer Science graduate with First Class Honours and professional experience delivering secure enterprise IT infrastructure solutions within the UK Defence sector.
 
