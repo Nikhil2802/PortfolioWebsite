@@ -72,7 +72,7 @@ const StyledButton2 = styled.button`
 
 const ProjectCard = ({ imgUrl, tags, title, description, githubUrl, demoUrl }) => {
   const [showVideoModal, setShowVideoModal] = useState(false);
-  const hasManyTags = tags.length > 3;
+  const hasManyTags = tags.length > 4;
 
   const handleOpenModal = () => {
     setShowVideoModal(true);
@@ -91,9 +91,9 @@ const ProjectCard = ({ imgUrl, tags, title, description, githubUrl, demoUrl }) =
           src={imgUrl}
           alt={title}
         />
-        <div className={`flex justify-center gap-2 mt-4 ${hasManyTags ? 'flex-wrap min-h-[52px]' : 'flex-nowrap'}`}>
+        <div className={`flex justify-center gap-1.5 mt-4 ${hasManyTags ? 'flex-wrap min-h-[52px]' : 'flex-nowrap'}`}>
           {tags.map((tag, index) => (
-            <span key={index} className="px-2 py-1 bg-[#f07171] bg-opacity-10 text-[#ff2f2f] rounded-full text-[11px] whitespace-nowrap">
+            <span key={index} className="px-1.5 py-1 bg-[#f07171] bg-opacity-10 text-[#ff2f2f] rounded-full text-[10px] whitespace-nowrap">
               {tag}
             </span>
           ))}
