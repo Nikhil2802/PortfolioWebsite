@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T12:00:00.000Z",
+  "title": "Design System: Nikhil Patel — Event Display",
+  "extensions": {
+    "colorMeta": {
+      "vacuum": {
+        "role": "neutral",
+        "displayName": "Vacuum",
+        "canonical": "#07090D",
+        "tonalRamp": ["oklch(12% 0.012 260)", "oklch(18% 0.014 260)", "oklch(26% 0.016 260)", "oklch(36% 0.018 260)", "oklch(48% 0.018 260)", "oklch(62% 0.016 260)", "oklch(78% 0.012 260)", "oklch(94% 0.006 260)"]
+      },
+      "vacuum-raised": {
+        "role": "neutral",
+        "displayName": "Vacuum Raised",
+        "canonical": "#0C1016",
+        "tonalRamp": ["oklch(14% 0.014 258)", "oklch(21% 0.016 258)", "oklch(29% 0.018 258)", "oklch(39% 0.019 258)", "oklch(51% 0.019 258)", "oklch(64% 0.017 258)", "oklch(79% 0.013 258)", "oklch(94% 0.007 258)"]
+      },
+      "vacuum-sunk": {
+        "role": "neutral",
+        "displayName": "Vacuum Sunk",
+        "canonical": "#04060A",
+        "tonalRamp": ["oklch(10% 0.012 262)", "oklch(17% 0.014 262)", "oklch(25% 0.015 262)", "oklch(35% 0.017 262)", "oklch(47% 0.017 262)", "oklch(61% 0.015 262)", "oklch(77% 0.011 262)", "oklch(93% 0.006 262)"]
+      },
+      "vacuum-lift": {
+        "role": "neutral",
+        "displayName": "Vacuum Lift",
+        "canonical": "#10161F",
+        "tonalRamp": ["oklch(15% 0.020 256)", "oklch(22% 0.023 256)", "oklch(30% 0.025 256)", "oklch(40% 0.027 256)", "oklch(52% 0.026 256)", "oklch(65% 0.023 256)", "oklch(80% 0.017 256)", "oklch(95% 0.009 256)"]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Steel",
+        "canonical": "#6E8FAC",
+        "tonalRamp": ["oklch(15% 0.035 245)", "oklch(25% 0.045 245)", "oklch(35% 0.052 245)", "oklch(45% 0.058 245)", "oklch(61% 0.058 245)", "oklch(72% 0.048 245)", "oklch(84% 0.032 245)", "oklch(95% 0.014 245)"]
+      },
+      "steel-bright": {
+        "role": "neutral",
+        "displayName": "Steel Bright",
+        "canonical": "#93A6B8",
+        "tonalRamp": ["oklch(15% 0.020 247)", "oklch(25% 0.026 247)", "oklch(35% 0.030 247)", "oklch(46% 0.033 247)", "oklch(58% 0.034 247)", "oklch(72% 0.034 247)", "oklch(84% 0.026 247)", "oklch(95% 0.012 247)"]
+      },
+      "steel-dim": {
+        "role": "neutral",
+        "displayName": "Steel Dim",
+        "canonical": "#2C3B49",
+        "tonalRamp": ["oklch(15% 0.024 247)", "oklch(22% 0.028 247)", "oklch(30% 0.031 247)", "oklch(40% 0.034 247)", "oklch(52% 0.034 247)", "oklch(65% 0.030 247)", "oklch(80% 0.022 247)", "oklch(95% 0.010 247)"]
+      },
+      "detector-arc": {
+        "role": "neutral",
+        "displayName": "Detector Steel",
+        "canonical": "#3C5568",
+        "tonalRamp": ["oklch(15% 0.026 242)", "oklch(23% 0.034 242)", "oklch(32% 0.040 242)", "oklch(44% 0.044 242)", "oklch(56% 0.044 242)", "oklch(68% 0.038 242)", "oklch(82% 0.026 242)", "oklch(95% 0.011 242)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#D6DDE4",
+        "tonalRamp": ["oklch(15% 0.008 248)", "oklch(25% 0.009 248)", "oklch(36% 0.010 248)", "oklch(47% 0.011 248)", "oklch(59% 0.012 248)", "oklch(71% 0.012 248)", "oklch(82% 0.012 248)", "oklch(94% 0.008 248)"]
+      },
+      "infra": {
+        "role": "primary",
+        "displayName": "Infrastructure Yellow",
+        "canonical": "#A8861B",
+        "tonalRamp": ["oklch(20% 0.045 89)", "oklch(29% 0.065 89)", "oklch(38% 0.085 89)", "oklch(48% 0.103 89)", "oklch(58% 0.115 89)", "oklch(64% 0.122 89)", "oklch(78% 0.115 89)", "oklch(93% 0.060 89)"]
+      },
+      "software": {
+        "role": "primary",
+        "displayName": "Software Cyan",
+        "canonical": "#0095AA",
+        "tonalRamp": ["oklch(20% 0.040 212)", "oklch(29% 0.058 212)", "oklch(38% 0.074 212)", "oklch(48% 0.090 212)", "oklch(56% 0.100 212)", "oklch(62% 0.107 212)", "oklch(78% 0.080 212)", "oklch(93% 0.038 212)"]
+      },
+      "calor": {
+        "role": "secondary",
+        "displayName": "Calorimeter Red",
+        "canonical": "#C0392B",
+        "tonalRamp": ["oklch(20% 0.060 30)", "oklch(28% 0.085 30)", "oklch(36% 0.110 30)", "oklch(44% 0.140 30)", "oklch(54% 0.174 30)", "oklch(68% 0.145 30)", "oklch(82% 0.090 30)", "oklch(95% 0.038 30)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name, once, in the first viewport. Capped at 6rem so it never outgrows the event graphic beside it." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings. Infrastructure and Software take their own jet colour; every other heading is ink, because a status colour is never an identity." },
+      "title": { "displayName": "Title", "purpose": "Project names and responsibility leads." },
+      "body": { "displayName": "Body", "purpose": "All prose, capped at the 68ch measure." },
+      "lede": { "displayName": "Lede", "purpose": "The single positioning line under the name. The only lede on the page." },
+      "label": { "displayName": "Label / Measurement", "purpose": "The whole measurement layer: legends, nav, controls, chips, status tags, rail rows, axis notes. Uppercase, letterspaced 0.06em-0.22em, never below 12px. SVG track names are the one non-uppercase use, at 13px / 0.04em, because they are product names." }
+    },
+    "colorValidation": {
+      "method": "Data-visualisation palette validator, run against the vacuum ground (#07090D) and the lightest point of its gradient (#10161F).",
+      "band": "L 0.48-0.67 for a categorical pair on a dark surface",
+      "pair": [
+        { "token": "infra", "value": "#A8861B", "lightness": 0.635, "contrastOnLift": "5.3:1" },
+        { "token": "software", "value": "#0095AA", "lightness": 0.615, "contrastOnLift": "5.1:1" }
+      ],
+      "order": "Fixed: infrastructure first, software second. Categorical, never cycled, never extended.",
+      "superseded": [
+        { "value": "#F2D02C", "lightness": 0.862, "reason": "Outside the lightness band; the page read as glaring." },
+        { "value": "#39C0CF", "lightness": 0.743, "reason": "Outside the lightness band." }
+      ]
+    },
+    "shadows": [
+      { "name": "evidence-marker", "value": "inset 2px 0 0 var(--software)", "purpose": "The only box-shadow in the build: a zero-blur, zero-offset inset 2px cyan left rule marking the element a visitor has just arrived at. A hairline rule rendered without layout shift, never a lift. No outer, blurred or offset shadow exists anywhere." }
+    ],
+    "motion": [
+      { "name": "expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The world's single easing curve. Every transition and every keyframe uses it; there is no second curve and no spring." },
+      { "name": "duration-color", "value": "200ms", "purpose": "Colour and border transitions on controls, chips, nav items, links, inputs, calorimeter bars and the readout." },
+      { "name": "duration-isolate", "value": "260ms", "purpose": "Track opacity in the event display when a track or its chip is hovered or focused; siblings sharing a destination light with it." },
+      { "name": "duration-fade", "value": "300ms", "purpose": "Image opacity on video poster hover." },
+      { "name": "duration-ground", "value": "700ms", "purpose": "The shader canvas fading in over its CSS gradient fallback once WebGL is confirmed alive." },
+      { "name": "ev-draw", "value": "900ms cubic-bezier(0.16, 1, 0.3, 1) both", "purpose": "Tracks drawing outward from the origin via stroke-dashoffset, staggered 70ms per track." },
+      { "name": "ev-arrive", "value": "520ms cubic-bezier(0.16, 1, 0.3, 1) both", "purpose": "End marks and track labels fading in 620ms behind their own track." },
+      { "name": "evidence-arrive", "value": "2.4s cubic-bezier(0.16, 1, 0.3, 1) 1", "purpose": "One-shot arrival marker on .evidence:target: a faint steel wash plus the inset 2px cyan left rule, fading to the element's normal state. Drawn statically under reduced motion." },
+      { "name": "reduced-motion-floor", "value": "0.001ms", "purpose": "Under prefers-reduced-motion all animation and transition durations collapse to this; the finished state is the default and nothing is hidden waiting to animate." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container-max", "value": "1600px" },
+      { "name": "measure", "value": "68ch" },
+      { "name": "image-device-cap", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Control",
+      "kind": "button",
+      "refersTo": "control-primary",
+      "description": "The latching instrument control in its primary form: cyan outline at rest, filling to cyan with a knocked-out label on hover. The only filled surface in the system.",
+      "html": "<a class=\"ds-control ds-control-primary\" href=\"#software\">View the work</a>",
+      "css": ".ds-control { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid #2C3B49; background: transparent; color: #D6DDE4; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.14em; text-decoration: none; border-radius: 0; transition: color 200ms cubic-bezier(0.16,1,0.3,1), border-color 200ms cubic-bezier(0.16,1,0.3,1), background-color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-control-primary { border-color: #0095AA; color: #0095AA; } .ds-control-primary:hover { background: #0095AA; color: #07090D; } .ds-control-primary:focus-visible { outline: 2px solid #0095AA; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Default Control",
+      "kind": "button",
+      "refersTo": "control",
+      "description": "The secondary instrument control: hairline border, ink label, moving to cyan on hover and focus. Never filled.",
+      "html": "<a class=\"ds-control-2\" href=\"#console\">Get in touch</a>",
+      "css": ".ds-control-2 { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid #2C3B49; background: transparent; color: #D6DDE4; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.14em; text-decoration: none; border-radius: 0; transition: color 200ms cubic-bezier(0.16,1,0.3,1), border-color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-control-2:hover { border-color: #0095AA; color: #0095AA; } .ds-control-2:focus-visible { border-color: #0095AA; outline: 2px solid #0095AA; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Track Chip",
+      "kind": "chip",
+      "refersTo": "track-chip",
+      "description": "A track made operable: a real link to the element that evidences it, named for that destination in its accessible label. Hover or focus takes it to its jet colour and lights every chip sharing the same destination, dimming the rest to 40%. There is no pressed state; activation navigates. Shown here with the two Infrastructure-deployment siblings lit.",
+      "html": "<ul class=\"ds-chips\"><li><a class=\"ds-chip ds-chip-infra\" href=\"#duty-deployment\" aria-label=\"VMware ESXi, evidenced in Infrastructure deployment and management\">VMware ESXi</a></li><li><a class=\"ds-chip ds-chip-infra\" href=\"#duty-deployment\" aria-label=\"vCenter, evidenced in Infrastructure deployment and management\">vCenter</a></li><li><a class=\"ds-chip ds-chip-dim\" href=\"#duty-microsoft\" aria-label=\"Active Directory, evidenced in Microsoft systems administration\">Active Directory</a></li><li><a class=\"ds-chip ds-chip-dim\" href=\"#duty-automation\" aria-label=\"PowerShell, evidenced in Automation and scripting\">PowerShell</a></li></ul>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; } .ds-chip { display: block; padding: 6px 12px; border: 1px solid #2C3B49; background: transparent; color: #93A6B8; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; letter-spacing: 0.06em; text-decoration: none; border-radius: 0; transition: all 200ms cubic-bezier(0.16,1,0.3,1); } .ds-chip-infra { border-color: #A8861B; color: #A8861B; } .ds-chip-dim { opacity: 0.4; } .ds-chip:hover, .ds-chip:focus-visible { border-color: #0095AA; color: #0095AA; opacity: 1; } .ds-chip:focus-visible { outline: 2px solid #0095AA; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Status Tag",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "Reads a project's real state beside its title. Offline in steel-bright, Shipped in cyan, In progress in infra yellow, each with a leading dot and a border at 33% alpha of the text colour.",
+      "html": "<span class=\"ds-tag ds-tag-building\"><span class=\"ds-tag-dot\" aria-hidden=\"true\"></span>In progress</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px; border: 1px solid; border-radius: 0; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.14em; } .ds-tag-dot { width: 6px; height: 6px; border-radius: 9999px; background: currentColor; } .ds-tag-building { color: #A8861B; border-color: rgba(168,134,27,0.33); }"
+    },
+    {
+      "name": "Console Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "The only lighter-than-ground fill in the system. Mono uppercase legend above, hairline border brightening on hover and moving to cyan on focus; the border shift is the focus signal.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-legend\" for=\"ds-email\">Email</label><input class=\"ds-input\" id=\"ds-email\" type=\"email\" autocomplete=\"email\" /></div>",
+      "css": ".ds-field { display: block; max-width: 22rem; } .ds-legend { display: block; color: #6E8FAC; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.08em; } .ds-input { margin-top: 8px; width: 100%; padding: 10px 12px; border: 1px solid #2C3B49; border-radius: 0; background: #0C1016; color: #D6DDE4; font-family: Archivo, system-ui, sans-serif; font-size: 1rem; caret-color: #0095AA; transition: border-color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-input:hover { border-color: #6E8FAC; } .ds-input:focus { border-color: #0095AA; outline: none; }"
+    },
+    {
+      "name": "Section Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky header: 85% vacuum with backdrop blur, one row at every width, current section in cyan via aria-current. Short labels below 640 carry the full label as accessible name.",
+      "html": "<header class=\"ds-nav\"><nav aria-label=\"Sections\"><a class=\"ds-nav-name\" href=\"#event\">Nikhil Patel</a><span class=\"ds-nav-sep\" aria-hidden=\"true\"></span><ul class=\"ds-nav-list\"><li><a class=\"ds-nav-link ds-nav-current\" href=\"#infrastructure\" aria-current=\"true\">Infrastructure</a></li><li><a class=\"ds-nav-link\" href=\"#software\">Software</a></li><li><a class=\"ds-nav-link\" href=\"#calorimeter\">Calorimeter</a></li></ul></nav></header>",
+      "css": ".ds-nav { position: sticky; top: 0; border-bottom: 1px solid rgba(44,59,73,0.7); background: rgba(7,9,13,0.85); backdrop-filter: blur(12px); } .ds-nav nav { display: flex; flex-wrap: nowrap; align-items: center; gap: 16px; padding: 12px 24px; } .ds-nav-name { flex-shrink: 0; color: #D6DDE4; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em; text-decoration: none; } .ds-nav-sep { width: 1px; height: 12px; background: #2C3B49; } .ds-nav-list { display: flex; flex-wrap: nowrap; align-items: center; gap: 16px; list-style: none; margin: 0; padding: 0; } .ds-nav-link { display: block; padding: 4px 0; white-space: nowrap; color: #6E8FAC; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none; transition: color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-nav-link:hover { color: #D6DDE4; } .ds-nav-current { color: #0095AA; } .ds-nav-link:focus-visible { outline: 2px solid #0095AA; outline-offset: 3px; border-radius: 1px; }"
+    },
+    {
+      "name": "Instrument Rail",
+      "kind": "custom",
+      "refersTo": "legend",
+      "description": "Run metadata as a definition list on a 5.5rem label column, hairline-ruled, with the live readout as its last row. Tracks is the total track count, Routes the count of distinct destinations those tracks resolve to, and the readout renders track then destination. Sits in the flow, never floating, and only ever repeats labels that exist in the content data.",
+      "html": "<dl class=\"ds-rail\"><div class=\"ds-rail-row\"><dt class=\"ds-rail-label\">Tracks</dt><dd class=\"ds-rail-value\">16</dd></div><div class=\"ds-rail-row\"><dt class=\"ds-rail-label\">Routes</dt><dd class=\"ds-rail-value\">7</dd></div><div class=\"ds-rail-row ds-rail-last\"><dt class=\"ds-rail-label\">Readout</dt><dd class=\"ds-rail-value ds-rail-read\">PowerShell<span class=\"ds-rail-arrow\"> &#8594; </span><span class=\"ds-rail-meta\">Automation and scripting</span></dd></div></dl>",
+      "css": ".ds-rail { max-width: 24rem; margin: 0; font-variant-numeric: tabular-nums; } .ds-rail-row { display: grid; grid-template-columns: 5.5rem minmax(0,1fr); align-items: baseline; gap: 12px; border-top: 1px solid #2C3B49; padding: 8px 0; } .ds-rail-last { border-bottom: 1px solid #2C3B49; } .ds-rail-label { color: #6E8FAC; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.08em; } .ds-rail-value { margin: 0; color: #93A6B8; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; line-height: 1.1; letter-spacing: 0.06em; } .ds-rail-read { color: #A8861B; transition: color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-rail-arrow { color: #6E8FAC; } .ds-rail-meta { color: #93A6B8; }"
+    },
+    {
+      "name": "Evidence Item",
+      "kind": "card",
+      "refersTo": null,
+      "description": "The destination a track points at: no panel, no fill, a single hairline top rule, and a one-shot arrival marker when it becomes the :target. The marker is a faint steel wash plus a 2px inset cyan left rule fading to the item's normal state; under reduced motion the rule is drawn statically instead.",
+      "html": "<ul class=\"ds-ev-list\"><li class=\"ds-ev ds-ev-target\" id=\"duty-automation\"><h3 class=\"ds-ev-title\">Automation and scripting</h3><p class=\"ds-ev-body\">Use PowerShell to automate system administration tasks and configuration management.</p></li><li class=\"ds-ev\"><h3 class=\"ds-ev-title\">Network engineering</h3><p class=\"ds-ev-body\">Configure, support and troubleshoot Cisco switches, routers and Firepower appliances.</p></li></ul>",
+      "css": ".ds-ev-list { list-style: none; margin: 0; padding: 0; } .ds-ev { border-top: 1px solid #2C3B49; padding: 24px 0 24px 16px; transition: border-color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-ev:hover { border-color: rgba(168,134,27,0.5); } .ds-ev-title { margin: 0; color: #D6DDE4; font-family: Archivo, system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; line-height: 1.375; } .ds-ev-body { margin: 8px 0 0; max-width: 68ch; color: #93A6B8; font-family: Archivo, system-ui, sans-serif; font-size: 1rem; line-height: 1.625; } .ds-ev-target { animation: ds-evidence-arrive 2.4s cubic-bezier(0.16,1,0.3,1) 1; } @keyframes ds-evidence-arrive { 0% { background-color: rgba(110,143,172,0.16); box-shadow: inset 2px 0 0 #0095AA; } 100% { background-color: transparent; box-shadow: inset 2px 0 0 transparent; } }"
+    },
+    {
+      "name": "Calorimeter Bar",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A real module grade as deposited energy: a 6px calor-red bar on a dimmed steel track, hairline-divided, with the tabular grade at the right. The 60% floor is declared beneath the list rather than hidden. Calor red measures energy here; it never sets the section heading.",
+      "html": "<ul class=\"ds-cal\"><li class=\"ds-cal-row\"><div><p class=\"ds-cal-name\">Parallel Algorithms</p><div class=\"ds-cal-track\"><div class=\"ds-cal-bar\" style=\"width: 80%\"></div></div></div><span class=\"ds-cal-grade\">92%</span></li></ul><p class=\"ds-cal-axis\">Bars scaled from 60% to 100%</p>",
+      "css": ".ds-cal { list-style: none; margin: 0; padding: 0; font-variant-numeric: tabular-nums; } .ds-cal-row { display: grid; grid-template-columns: minmax(0,1fr) 3.25rem; align-items: center; gap: 16px; border-bottom: 1px solid #2C3B49; padding: 12px 0; } .ds-cal-name { margin: 0; color: #D6DDE4; font-family: Archivo, system-ui, sans-serif; font-size: 1rem; } .ds-cal-track { margin-top: 8px; height: 6px; width: 100%; background: rgba(44,59,73,0.4); } .ds-cal-bar { height: 100%; background: #C0392B; opacity: 0.8; transition: opacity 200ms cubic-bezier(0.16,1,0.3,1); } .ds-cal-row:hover .ds-cal-bar { opacity: 1; } .ds-cal-grade { text-align: right; color: #93A6B8; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.875rem; transition: color 200ms cubic-bezier(0.16,1,0.3,1); } .ds-cal-row:hover .ds-cal-grade { color: #C0392B; } .ds-cal-axis { margin-top: 16px; color: #6E8FAC; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 0.75rem; letter-spacing: 0.08em; }"
+    },
+    {
+      "name": "Event Display",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The signature graphic, compact variant: unlabelled hairline detector arcs in detector steel, a dashed beamline, two jets of quadratic tracks in their validated signal colours at identical scale, end marks, and the interaction point. Every track is a link to the id of the element that evidences it, with a wide transparent hit path and tabIndex -1 so the graphic adds no tab stops; the chips carry the same destinations as the real focusable path. Decorative and aria-hidden.",
+      "html": "<svg viewBox=\"0 0 420 400\" class=\"ds-event\" role=\"presentation\" aria-hidden=\"true\" focusable=\"false\"><defs><radialGradient id=\"ds-core\"><stop offset=\"0%\" stop-color=\"#FFFFFF\" stop-opacity=\"0.9\"/><stop offset=\"45%\" stop-color=\"#0095AA\" stop-opacity=\"0.5\"/><stop offset=\"100%\" stop-color=\"#0095AA\" stop-opacity=\"0\"/></radialGradient></defs><path d=\"M 145.1 123.6 A 110 110 0 0 1 145.1 276.4\" fill=\"none\" stroke=\"#3C5568\" stroke-width=\"1\"/><path d=\"M 201.2 69.4 A 188 188 0 0 1 201.2 330.6\" fill=\"none\" stroke=\"#3C5568\" stroke-width=\"1\"/><path d=\"M 257.3 15.2 A 266 266 0 0 1 257.3 384.8\" fill=\"none\" stroke=\"#3C5568\" stroke-width=\"1\"/><line x1=\"0\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#2C3B49\" stroke-width=\"1\" stroke-dasharray=\"2 8\"/><a href=\"#duty-deployment\" tabindex=\"-1\"><path d=\"M 66 200 Q 194.6 87.9 294.5 21.4\" fill=\"none\" stroke=\"#A8861B\" stroke-width=\"1.9\" stroke-opacity=\"0.85\" stroke-linecap=\"round\"/><circle cx=\"294.5\" cy=\"21.4\" r=\"4\" fill=\"#A8861B\"/></a><a href=\"#duty-automation\" tabindex=\"-1\"><path d=\"M 66 200 Q 213.6 108.3 331.6 118.6\" fill=\"none\" stroke=\"#A8861B\" stroke-width=\"1\" stroke-opacity=\"0.5\" stroke-linecap=\"round\"/><circle cx=\"331.6\" cy=\"118.6\" r=\"4\" fill=\"#A8861B\"/></a><a href=\"#project-scentscape\" tabindex=\"-1\"><path d=\"M 66 200 Q 213.6 291.7 331.6 281.4\" fill=\"none\" stroke=\"#0095AA\" stroke-width=\"1.9\" stroke-opacity=\"0.85\" stroke-linecap=\"round\"/><circle cx=\"331.6\" cy=\"281.4\" r=\"4\" fill=\"#0095AA\"/></a><a href=\"#project-facerec\" tabindex=\"-1\"><path d=\"M 66 200 Q 194.6 312.1 294.5 378.6\" fill=\"none\" stroke=\"#0095AA\" stroke-width=\"1\" stroke-opacity=\"0.5\" stroke-linecap=\"round\"/><circle cx=\"294.5\" cy=\"378.6\" r=\"4\" fill=\"#0095AA\"/></a><circle cx=\"66\" cy=\"200\" r=\"30\" fill=\"url(#ds-core)\"/><circle cx=\"66\" cy=\"200\" r=\"3.5\" fill=\"#FFFFFF\"/></svg>",
+      "css": ".ds-event { display: block; width: 100%; height: auto; background: radial-gradient(120% 90% at 18% 45%, #10161F 0%, #07090D 58%, #04060A 100%); } .ds-event a { cursor: pointer; transition: opacity 260ms cubic-bezier(0.16,1,0.3,1); } .ds-event:hover a { opacity: 0.16; } .ds-event a:hover { opacity: 1; }"
+    },
+    {
+      "name": "Vacuum Ground",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The ground as shipped without WebGL, which is treated as the real design rather than a degradation: a radial gradient from Vacuum Lift at 18% 45% through Vacuum to Vacuum Sunk. The shader adds two octaves of noise, a 35% vignette and a cyan pointer bloom on top of exactly this. Vacuum and ink are additionally set inline on html and body, with color-scheme dark, so the first paint never waits for a stylesheet.",
+      "html": "<div class=\"ds-ground\" aria-hidden=\"true\"></div>",
+      "css": ".ds-ground { min-height: 200px; color-scheme: dark; background-color: #07090D; background-image: radial-gradient(120% 90% at 18% 45%, #10161F 0%, #07090D 58%, #04060A 100%); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Reconstructed Event",
+    "overview": "The page is one particle-collision event already reconstructed on screen. A single interaction point sits left of centre; two jets fan out of it to the right, one for secure infrastructure and one for shipped software, drawn at the same scale with the same track count because the claim being made is that neither half is a footnote. Everything around that graphic is instrument chrome rather than product UI: hairline arcs, engraved letterspaced mono labels pinned to what they measure, tabular figures, and a near-black vacuum ground that is alive rather than flat.\n\nThe event is no longer decoration. Every one of the sixteen tracks points at the exact element on this page that evidences it, hovering or focusing one lights every track that shares a destination, and following it scrolls to the proof and marks it once on arrival. The graphic mirrors that state and stays out of the tab order; the chips beneath it are the real links. The three detector arcs carry no labels, because they never measured anything and labelling them implied an axis that did not exist.\n\nThe density is high in the measurement layer and generous in the reading layer. Labels, metadata and status run at a 12px mono floor with wide tracking; prose runs at a comfortable 16-20px capped at a 68-character measure. Colour is scarce by construction, and it is also deliberately dim: the signal pair was darkened until both members sat inside a validated lightness band for a near-black surface, because the brighter pair glared. Almost the entire surface is four values of near-black and three values of steel blue.\n\nConfirmed rejections, all held by the build: no cards, no rounded product-UI containers, no elevation shadows, no glow used as decoration, and no second motion curve. The one authored moment is the event reconstructing itself once per page load, and the finished state is always the default, so a reader who asks for stillness gets the complete event with no animation attached at all.",
+    "keyCharacteristics": [
+      "Near-black vacuum ground, painted inline on <html> and <body> so it never waits for a stylesheet",
+      "Two signal colours at permanently equal weight, validated as a categorical pair rather than picked by eye",
+      "Every graphic track is a route: a destination id, a human destination label, and a one-shot arrival marker",
+      "Zero elevation: depth comes from tonal layering, 1px hairlines and a shader vignette",
+      "Square corners everywhere; circles only for real instrument marks",
+      "A two-voice type system, Archivo for structure and Martian Mono for measurement",
+      "One authored entrance, one easing curve, fully still under reduced motion"
+    ],
+    "rules": [
+      { "name": "The Equal Jets Rule", "body": "Infrastructure yellow and software cyan always carry identical visual weight: same stroke weights, same arc span, same chip treatment, same heading scale, same track count. Neither may be given more saturation, more area, or earlier position. If a change makes one jet read as the main one, the change is wrong.", "section": "colors" },
+      { "name": "The Validated Pair Rule", "body": "The two signal colours are a categorical pair in fixed order - infrastructure first, software second - never cycled, never generated, never extended to a third member. They hold because they were run through the data-visualisation palette validator against the vacuum ground and against the lightest point of its gradient: both sit inside the L 0.48-0.67 band for a dark surface (infra 0.635, software 0.615), with chroma above the grey floor and colour-vision-deficiency separation past threshold. The earlier pair failed that band outright at L 0.862 and L 0.743, which is why the page read as glaring. Any future change to either colour is re-validated the same way, never eyeballed.", "section": "colors" },
+      { "name": "The Ground-First Rule", "body": "The ground may never depend on a stylesheet arriving. Vacuum and ink are set as inline styles on <html> and <body> in pages/_document.js, and color-scheme: dark is declared both there and on :root, so the browser paints its own canvas, scrollbars and form controls dark before any CSS is parsed. A near-black world that gets its background from an external stylesheet flashes a white page with unreadable text; that is a defect, not a loading state.", "section": "colors" },
+      { "name": "The Ground-Gradient Contrast Rule", "body": "Text contrast is measured against Vacuum Lift (#10161F), the lightest point of the ground gradient, never against pure black. Steel is the darkest colour permitted to carry text, at 5.4:1 measured that way; anything dimmer is chrome, not text. The signal colours clear the same floor as text (infra 5.3:1, software 5.1:1).", "section": "colors" },
+      { "name": "The Status-Not-Identity Rule", "body": "Status colours never set a heading. Calor red measures 3.3:1 against the lightest ground, which only clears the large-text floor, and it means energy or error rather than section identity - so the Calorimeter heading is ink, like every other non-jet heading. Only the two jets name themselves in their own colour, because for them the colour is the identity.", "section": "colors" },
+      { "name": "The Signal Scarcity Rule", "body": "A signal colour means active, latched, current, or measured. It never means \"important\". Outside the two jets, the calorimeter bars, status tags and interaction states, the whole page is vacuum and steel.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Archivo carries structure and prose; Martian Mono carries measurement. There is no third face and no decorative face. If a string is an identifier, a number, a status, or a control, it is mono, uppercase and letterspaced; if it is a sentence, it is Archivo in sentence case.", "section": "typography" },
+      { "name": "The 12px Floor Rule", "body": "The measurement layer runs small but never below 0.75rem (12px). Small type earns its size with letterspacing and tabular figures, never by shrinking.", "section": "typography" },
+      { "name": "The Measure Rule", "body": "Prose is capped at 68ch (max-w-measure). No paragraph on this page runs the full width of its column.", "section": "typography" },
+      { "name": "The One Row Rule", "body": "The navigation holds exactly one row at every width. Below 640 it uses short labels with the full section label as the accessible name; the site name waits for lg rather than being allowed to wrap the bar.", "section": "layout" },
+      { "name": "The Two Variants Rule", "body": "The event display ships in exactly two forms: a labelled full variant (1000x660 viewBox, three arcs at r180/310/440, track names at r490) from 768 up, and a label-free compact variant (420x400, r110/188/266) below it, where the chips underneath carry the names. The signature image shrinks; it never disappears. Labels in the full variant name tracks only - the arcs are never labelled.", "section": "layout" },
+      { "name": "The No-Elevation Rule", "body": "Surfaces never lift. There is no outer, blurred, offset or hard-offset shadow anywhere in the build and none may be added. If something needs to separate from the ground, give it a hairline, a tonal step, or nothing.", "section": "elevation" },
+      { "name": "The Field-Only Glow Rule", "body": "Soft light exists in exactly two places: the interaction-point core (a white-to-cyan radial gradient fading to zero) and the pointer bloom in the shader ground. Text, headings, borders, controls and images never glow.", "section": "elevation" },
+      { "name": "The Route-Not-Decoration Rule", "body": "Nothing in the event display encodes a quantity it does not have. Every track resolves to a real destination id and a human destination label in the content data; a track with no proof to point at does not get drawn, and a piece of chrome with nothing to measure does not get a label. The arcs lost their names for exactly this reason.", "section": "components" },
+      { "name": "The One Arrival Rule", "body": "Following a track marks its destination once: a 2.4s one-shot .evidence:target marker - a faint steel wash plus the 2px inset cyan left rule - fading to the element's normal state. Under reduced motion the rule is drawn statically instead of animated. Nothing is hidden when :target does not match.", "section": "components" },
+      { "name": "The One Authored Moment Rule", "body": "There is exactly one entrance per page load: the event reconstructs itself, tracks drawing outward from the origin at 70ms per step and end marks and labels arriving 620ms behind their own track. It is gated by a three-state phase - idle is what the server renders (the finished event, no animation attached), run plays it once on mount, done strips the animation classes permanently so no resize, rotation or style recalculation can replay it. Nothing else on the page has an entrance.", "section": "components" },
+      { "name": "The Single Curve Rule", "body": "One easing curve, cubic-bezier(0.16, 1, 0.3, 1), on every transition and every keyframe in the system, exposed as the expo timing function. Durations: 200ms for colour, 260ms for track isolation, 300-700ms for opacity fades, 520-900ms for the entrance, 2.4s for the arrival marker. No other curve, no springs.", "section": "components" },
+      { "name": "The Finished-State-Default Rule", "body": "Entrance rules live only inside prefers-reduced-motion: no-preference, and reduced motion additionally collapses all animation and transition durations to 0.001ms, disables smooth scrolling, and keeps the shader and the custom cursor from mounting at all. Nothing is ever hidden waiting to animate in.", "section": "components" }
+    ],
+    "dos": [
+      "Do give any new evidence type the asymmetric band grid: a narrow sticky left rail for heading, definition list and summary; a wide right column for the proof.",
+      "Do bound and divide with 1px steel-dim hairlines and square corners, and let the vacuum ground show through instead of filling a panel.",
+      "Do paint any new ground inline in the document alongside color-scheme: dark, so the first paint is already dark without the stylesheet.",
+      "Do measure text contrast against Vacuum Lift (#10161F), and keep body prose on steel-bright or ink with steel reserved for legends and metadata.",
+      "Do re-validate both signal colours together against the ground and its lightest point if either is ever changed, keeping them inside the L 0.48-0.67 band and in fixed order.",
+      "Do set every identifier, number, status, label and control in Martian Mono, uppercase, at the 12px floor with tracking between 0.06em and 0.22em, and keep tabular figures on.",
+      "Do cap prose at the 68ch measure, and set section headings in ink unless the section is a jet.",
+      "Do point every graphic affordance at a real destination id with a human destination label, mirror it with a real focusable link, and mark the destination once on arrival.",
+      "Do tone-grade bright third-party imagery into the ground before shipping it: the facial-recognition screenshot and its poster hold a white point near 0.65 with a slight cool cast, because a near-white desktop capture glares on a near-black page.",
+      "Do use cubic-bezier(0.16, 1, 0.3, 1) for every transition, and make any new animation one-shot, non-replaying and absent under reduced motion.",
+      "Do state the scale when a chart is not zero-based, the way the calorimeter prints its 60%-to-100% floor beneath the bars."
+    ],
+    "donts": [
+      "Don't add an elevation shadow: no outer, blurred, offset or hard-offset box-shadow anywhere. The one permitted use of the property is the zero-blur 2px inset cyan left rule on .evidence:target, which is a hairline rule rendered without layout shift, not a lift.",
+      "Don't round a corner. Radius stays at 0 for controls, chips, tags, inputs, images and containers; circles are only for real instrument marks.",
+      "Don't wrap content in a card or a rounded product-UI panel, and don't build a grid of identically sized project tiles - evidence is sized by what it has to show.",
+      "Don't let either signal colour outrank the other in weight, area, saturation or order, don't introduce a third jet colour, and don't brighten either one back toward the pre-validation pair.",
+      "Don't set a heading, a nav item or any identity element in a status colour; calor red is energy and error only.",
+      "Don't spend a signal colour on decoration. If it is not active, current, latched or measured, it is steel.",
+      "Don't label a piece of chrome that measures nothing, and don't draw a track that points at no evidence.",
+      "Don't let the same destination be reachable only through the graphic; the chips are the keyboard and screen-reader path, and the SVG's anchors stay at tabIndex -1 so there is one set of tab stops.",
+      "Don't ship a near-white raster onto the ground ungraded.",
+      "Don't add glow, bloom or a light effect outside the interaction-point core and the shader's pointer field.",
+      "Don't introduce a third typeface, a display serif, or a system display face; Archivo and Martian Mono are the whole voice.",
+      "Don't add a kicker, eyebrow or floating category label above a heading. Mono letterspaced labels are legitimate only when attached to what they measure - definition terms, form labels, chips, status tags, rail rows, axis notes.",
+      "Don't use an icon font or a glyph character as an icon; inline SVG is the only permitted form.",
+      "Don't add a second easing curve, a spring, a scroll-driven reveal, or any entrance beyond the one event reconstruction.",
+      "Don't remove a focus outline without replacing it in the world's own vocabulary (2px software cyan at 3px offset, or a border shift to cyan on a bordered field)."
+    ]
+  }
+}

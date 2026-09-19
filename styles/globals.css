@@ -2,22 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .heroButton{
-        @apply px-4 py-2  uppercase
-        text-xs tracking-widest text-gray-500 transition-all 
-        hover:border-red-500 hover:text-red-500
+/*
+  Event display: near-black vacuum, steel detector chrome, two signal tracks.
+  Browser surfaces (selection, caret, scrollbar, focus) are themed from the
+  palette rather than left on their defaults.
+*/
+
+@layer base {
+  :root {
+    --vacuum: #07090d;
+    --steel: #6e8fac;
+    --steel-bright: #93a6b8;
+    --steel-dim: #2c3b49;
+    --vacuum-raised: #0c1016;
+    --arc: #3c5568;
+    --ink: #d6dde4;
+    --infra: #a8861b;
+    --software: #0095aa;
+    --calor: #c0392b;
+  }
+
+  :root {
+    /* Paint the browser's own canvas, scrollbars and controls dark. */
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* The ground lives on html as well as body, so no paint can fall through. */
+    background-color: var(--vacuum);
+    color: var(--ink);
+  }
+
+  body {
+    background-color: var(--vacuum);
+    color: var(--ink);
+    /* Tabular figures everywhere: this is an instrument. */
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: var(--software);
+    color: var(--vacuum);
+  }
+
+  * {
+    caret-color: var(--software);
+  }
+
+  /* Focus is never removed; it is drawn in the world's own vocabulary. */
+  :focus-visible {
+    outline: 2px solid var(--software);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-color: var(--steel-dim) var(--vacuum);
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--vacuum);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--steel-dim);
+    border: 2px solid var(--vacuum);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--steel);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
-      
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
 }
 
+/*
+  The one authored moment: the event reconstructs once on load, tracks drawing
+  outward from the origin and their end marks and labels arriving behind them.
 
-
-html {
-    font-size: 75%;
-    transition: font-size 0.3s ease-in-out;
+  The finished state is the default. Nothing here hides content: the rules only
+  exist inside prefers-reduced-motion: no-preference, so a reader who asks for
+  stillness gets the fully drawn event with no animation attached at all.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  .ev-track {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: ev-draw 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
-  
 
-  
-  
+  .ev-mark {
+    opacity: 0;
+    animation: ev-arrive 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes ev-draw {
+    from {
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes ev-arrive {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  Arriving at a piece of evidence marks it, so a visitor who followed a track
+  from the event can see which item answered them. It fades once and leaves
+  the item in its normal state; nothing is hidden when :target does not match.
+*/
+.evidence:target {
+  animation: evidence-arrive 2.4s cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+
+@keyframes evidence-arrive {
+  0% {
+    background-color: rgba(110, 143, 172, 0.16);
+    box-shadow: inset 2px 0 0 var(--software);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: inset 2px 0 0 transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evidence:target {
+    animation: none;
+    box-shadow: inset 2px 0 0 var(--software);
+  }
+}
+
+@layer components {
+  /* Engraved instrument label: letterspaced, small, measurement register. */
+  .legend {
+    @apply font-mono text-meas uppercase text-steel-bright;
+  }
+
+  /* Latching instrument control. */
+  .control {
+    @apply font-mono text-meas uppercase tracking-[0.14em]
+           inline-flex items-center gap-2 px-4 py-2.5
+           border border-steel-dim text-ink bg-transparent
+           transition-colors duration-200 ease-expo
+           hover:border-software hover:text-software
+           focus-visible:border-software;
+  }
+
+  .control-primary {
+    @apply border-software text-software
+           hover:bg-software hover:text-vacuum;
+  }
+}

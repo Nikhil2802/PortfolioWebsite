@@ -6,24 +6,39 @@ module.exports = {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        'red': '0px 0px 15px 3px rgba(255,0,0,0.7)',
-        'blue': '0px 0px 15px 3px rgba(0,0,255,0.7)',
-        'green': '0px 0px 15px 3px rgba(0,255,0,0.7)',
-        'white': '0px 0px 15px 3px rgba(175,175,175,0.7)',
-        'pink': '0px 0px 15px 3px rgba(255,192,203,0.7)',
-        'dark-red': '0px 0px 15px 3px rgba(255,0,0,0.2)',
-        'dark-blue': '0px 0px 15px 3px rgba(0,0,255,0.2)',
-        'dark-green': '0px 0px 15px 3px rgba(0,255,0,0.2)',
-        'dark-orange': '0px 0px 15px 3px rgba(255,165,0,0.2)',
-        'dark-pink': '0px 0px 15px 3px rgba(255,192,203,0.2)',
+      colors: {
+        // Detector event display: near-black vacuum, steel detector, signal tracks.
+        vacuum: {
+          DEFAULT: "#07090D",
+          raised: "#0C1016",
+          sunk: "#04060A",
+        },
+        steel: {
+          DEFAULT: "#6E8FAC", // 5.4:1 on the lightest point of the ground
+          bright: "#93A6B8",  // body prose, 7.4:1 on the lightest ground
+          dim: "#2C3B49",     // hairlines
+        },
+        ink: "#D6DDE4",
+        infra: "#A8861B",     // infrastructure jet, validated
+        software: "#0095AA",  // software jet, validated
+        calor: "#C0392B",     // calorimeter energy
+      },
+      fontFamily: {
+        sans: ["var(--font-archivo)", "system-ui", "sans-serif"],
+        mono: ["var(--font-martian)", "ui-monospace", "monospace"],
+      },
+      fontSize: {
+        // Measurement layer runs small but never below 12px.
+        meas: ["0.75rem", { lineHeight: "1.1", letterSpacing: "0.08em" }],
+      },
+      maxWidth: {
+        measure: "68ch",
+      },
+      transitionTimingFunction: {
+        // Exponential ease-out, the world's single motion curve.
+        expo: "cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
-
-  
-}
-
+  plugins: [],
+};

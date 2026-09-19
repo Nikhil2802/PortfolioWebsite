@@ -1,70 +1,80 @@
-import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
 import Head from "next/head";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import AnimatedCursor from "react-animated-cursor";
+import Calorimeter from "@/components/site/Calorimeter";
+import Console from "@/components/site/Console";
+import Cursor from "@/components/site/Cursor";
+import EventHeader from "@/components/site/EventHeader";
+import Infrastructure from "@/components/site/Infrastructure";
+import Operator from "@/components/site/Operator";
+import SiteNav from "@/components/site/SiteNav";
+import Software from "@/components/site/Software";
+import VacuumField from "@/components/site/VacuumField";
+import { ReadoutProvider } from "@/components/site/Readout";
+import { identity } from "@/components/site/data";
+
+const DESCRIPTION =
+  "Nikhil Patel is a Systems Engineer at Fujitsu building secure infrastructure for the UK Ministry of Defence, and a full-stack engineer who designs and ships his own products.";
 
 export default function Home() {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768); 
-    };
-
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <div className="bg-[hsl(0,0%,14%)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-purple-400">
-      {isDesktop && (
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={8}
-          color="255, 255, 255"
-          outerAlpha={0.2}
-          innerScale={0.7}
-          outerScale={5}
-        />
-      )}
-
+    <>
       <Head>
-        <title>Nikhil&apos;s Portfolio</title>
+        <title>Nikhil Patel — Systems and Software Engineer</title>
+        <meta name="description" content={DESCRIPTION} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#07090D" />
+
+        {/* Link previews: a recruiter forwarding this should not send a blank card. */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Nikhil Patel — Systems and Software Engineer" />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nikhil Patel — Systems and Software Engineer" />
+        <meta name="twitter:description" content={DESCRIPTION} />
+        <meta name="twitter:image" content="/og.jpg" />
+
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <VacuumField />
+      <Cursor />
 
-      <section id="hero">
-        <Hero />
-      </section>
+      <ReadoutProvider>
+        <SiteNav />
 
-      <section id="about">
-        <About />
-      </section>
+        <main>
+          <EventHeader />
+          <Operator />
+          <Infrastructure />
+          <Software />
+          <Calorimeter />
+          <Console />
+        </main>
 
-      <section id="skills">
-        <Skills />
-      </section>
-
-      <section id="experience">
-        <Experience />
-      </section>
-
-      <section id="projects" >
-        <Projects />
-      </section>
-
-      <section id="contact" >
-        <Contact />
-      </section>
-    </div>
+        <footer className="border-t border-steel-dim">
+          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-4 px-6 py-8 md:px-12 md:pb-20">
+            <p className="font-mono text-meas uppercase tracking-[0.14em] text-steel">
+              {identity.name} · Built with Next.js
+            </p>
+            <ul className="flex gap-6">
+              {identity.links.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-meas uppercase tracking-[0.14em] text-steel-bright transition-colors duration-200 ease-expo hover:text-software"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </footer>
+      </ReadoutProvider>
+    </>
   );
 }
